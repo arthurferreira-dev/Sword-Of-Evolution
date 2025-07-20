@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sword of Evolution</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" href="favicon/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="favicon/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <style>
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            #btn-play, #btn-conq {
+                width: 190px;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            #btn-play, #btn-conq {
+                width: 245px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex justify-center items-center flex-col w-full h-[100vh]">
+        <span class="text-4xl mt-1">
+            <i class='bx bx-sword-alt'></i>
+        </span>
+        <h2 class="text-2xl">Sword of Evolution</h2>
+        <button id="btn-play" class="bg-sky-400 p-2 mt-2 duration-[.43s] font-mono text-xl md:w-[280px] hover:bg-sky-500">
+            Jogar
+        </button>
+        <button id="btn-conq" class="mt-2 bg-indigo-600 p-2 duration-[.43s] font-mono text-xl md:w-[280px] hover:bg-indigo-700">
+            Conquistas
+        </button>
+    </div>
+</body>
+</html>
