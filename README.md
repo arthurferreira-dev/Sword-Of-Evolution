@@ -10,7 +10,7 @@
 <br>
 
 <p>
-Sword of Evolution é um jogo web dinâmico que combina mecânicas de evolução com ação e estratégia. Desenvolvido com **JavaScript** e estilizado com **Tailwind CSS**, o jogo oferece uma experiência visualmente atraente e interativa. À medida que o jogador avança, ele deve aprimorar suas armas e evoluir suas habilidades para enfrentar desafios crescentes, enquanto desbloqueia novas capacidades e power-ups. Com um design leve e fluido, o jogo é ideal para quem busca uma experiência envolvente diretamente no navegador, sem necessidade de downloads.
+Sword of Evolution é um jogo web dinâmico que combina mecânicas de evolução com ação e estratégia. Desenvolvido com <strong>JavaScript</strong> e estilizado com <strong>Tailwind CSS</strong>, o jogo oferece uma experiência visualmente atraente e interativa. À medida que o jogador avança, ele deve aprimorar suas armas e evoluir suas habilidades para enfrentar desafios crescentes, enquanto desbloqueia novas capacidades e power-ups. Com um design leve e fluido, o jogo é ideal para quem busca uma experiência envolvente diretamente no navegador, sem necessidade de downloads.
 </p>
 
 <h2 align="center">Versão</h2>
