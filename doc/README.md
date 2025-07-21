@@ -1,8 +1,8 @@
 <h1 align="center">Equipe Principal</h1>
 
-<section align="center">
-    <li>Arthur Ferreira Dev</li>
-    <li>Sadi Porera</li>
-</section>
+<div align="center">
+    <p>Arthur Ferreira Dev</p>
+    <p>Sadi Porera</p>
+</div>
 
 <h2 align="center">Obrigado por contribuir com o Projeto 😄⚔️ !</h2>
