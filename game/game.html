@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sword of Evolution - Gameplay</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" href="../favicon/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../favicon/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-white text-black dark:bg-zinc-800 dark:text-white">
+    <div id="menu-pause" class="text-center text-black flex flex-col felx-wrap justify-center items-center w-full h-[100vh] hidden bg-stone-100 dark:text-white dark:bg-zinc-600">
+        <span class="text-4xl mt-1 mb-1 animate-bounce">
+            <i class='bx bx-sword-alt'></i>
+        </span>
+        <h2 class="text-2xl mb-1 hover:cursor-pointer" onclick="Return()">Retomar</h2>
+        <h2 class="text-2xl mb-1 hover:cursor-pointer" onclick="Salve()">Salvar Progresso</h2>
+        <h2 class="text-2xl mb-1 hover:cursor-pointer" onclick="Leave()">Sair</h2>
+    </div>
+
+    <div id="game-display" class="w-full h-[100vh]">
+        <div id="menu" class="absolute top-0 left-0">
+            <span class="text-4xl block max-[480px]:text-3xl hover:cursor-pointer" id="span-icon" onclick="Menu()"><i class='bx bx-menu' id="icon-menu"></i></span>
+        </div>
+    </div>
+</body>
+<script src="scripts/game.js"></script>
+</html>
