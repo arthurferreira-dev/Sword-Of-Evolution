@@ -55,6 +55,9 @@ Sword of Evolution é um jogo web dinâmico que combina mecânicas de evolução
     <a href="doc/README.md">Equipe Principal</a>
 </div>
 
+<h2 align="center">Inimigos</h2>
+<div align="center"><a href="doc/inimigos/gosma.md">Gosma</a></div>
+
 <h2 align="center">Versão</h2>
 
 <div align="center"><a href="https://github.com/arthurferreira-dev/arthurferreira-dev/blob/main/docs/pt-BR/demo.md">DD0.2</a></div>

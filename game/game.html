@@ -17,7 +17,7 @@
     <link rel="manifest" href="../favicon/site.webmanifest">
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-white text-black dark:bg-zinc-800 dark:text-white">
+<body class="bg-white text-black overflow-hidden dark:bg-zinc-800 dark:text-white">
     <div id="menu-pause" class="text-center text-black flex flex-col felx-wrap justify-center items-center w-full h-[100vh] hidden bg-stone-100 dark:text-white dark:bg-zinc-600">
         <span class="text-4xl mt-1 mb-1 animate-bounce">
             <i class='bx bx-sword-alt'></i>
@@ -30,6 +30,22 @@
     <div id="game-display" class="w-full h-[100vh]">
         <div id="menu" class="absolute top-0 left-0">
             <span class="text-4xl block max-[480px]:text-3xl hover:cursor-pointer" id="span-icon" onclick="Menu()"><i class='bx bx-menu' id="icon-menu"></i></span>
+        </div>
+        <h2 id="alert-enemy" class="text-center font-semibold text-2xl mt-2 max-[510px]:text-xl">a</h2>
+        <div id="enemy-screen" class="flex flex-col flex-wrap justify-center items-center">
+            <img src="" id="enemy-sprite">
+            <div id="enemy-info" class="flex flex-row flex-nowrap justify-center items-center">
+                <h3 class="text-xl font-semibold m-5" id="name">NAME</h3>
+                <h3 class="text-xl font-semibold text-green-500 dark:text-green-400 m-5" id="hp">HP</h3>
+                <h3 class="text-xl font-semibold text-red-600 dark:text-red-500 m-5" id="ataque">ATTACK</h3>
+                <h3 class="text-xl font-semibold text-blue-500 dark:text-sky-400 m-5" id="fraqueza">FRAC</h3>
+                <h3 class="text-xl font-semibold text-yellow-500 dark:text-yellow-300 m-5" id="info">INFO</h3>
+            </div>
+        </div>
+        <div id="user-screen" class="absolute top-0 right-2">
+            <h3>Vida</h3>
+            <h3>Attack</h3>
+            <h3></h3>
         </div>
     </div>
 </body>
