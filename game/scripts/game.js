@@ -4,6 +4,9 @@ let Gameplay = document.querySelector('#game-display');
 let AlertEnemy = document.querySelector('#alert-enemy');
 let EnemySprite = document.querySelector('img#enemy-sprite');
 
+let currentEnemy = null;
+let currentEnemyHP = 0;
+
 let nome;
 let vida;
 let ataque;
@@ -21,6 +24,7 @@ const EnemyInfo = [
 var health = 20 // HP
 var att = 2 // ATTACK
 var criti = att*2 // CRITICAL
+let lv = 0;
 
 const enemys = ['Gosma', 'Esqueleto', 'Gosma Brilhante', 'Zumbi', 'Zumbi Gigante', 'Saci Pererê', 'O Predador Natural', 'Temteki', 'Medusa'];
 
@@ -61,7 +65,7 @@ const enemysAtributes = [
     predador = {hp:175, attack:300, info:'fugir é hit kill'}, 
     temteki = {hp:150, attack:200, frac:'Fogo (dobra o dano do User)'}, 
     medusa = {hp:200, attack:75, info:'Se olhar é hit kill'}
-]
+];
 
 const SemiBossesAtributes = [
     ciclope = {hp:145, attack:350, frac:'tem ponto cego, cai para 250 espalhado'}, 
@@ -77,7 +81,7 @@ const FinalBossesAtributes = [
     zeus = {hp:1000, attack:2000}, 
     phoenix = {hp:5000, attack:7500, help:harpia}, 
     harpia = {hp:150*5, attack:75*5, info:`Ajudam a ${FinalBosses[2]} dando suporte`}
-]
+];
 
 const Conquistas = [
     welcome = {title:'Bem-vindo(a)', desc:'Participar do jogo pela primeira vez. Obrigado!'}, 
@@ -98,17 +102,22 @@ function Load() {
     health = Number(GetItem("hp")) || 20;
     att = Number(GetItem("attack")) || 2;
     criti = Number(GetItem("critical")) || att * 2;
+    lv = Number(GetItem("level") || 0);
 }
 
 function Game() {
-    const personagem = { hp:health, attack:att, critical:criti }
+    let UserLv = document.querySelector('#user-level');
+
+    const personagem = { hp:health, attack:att, critical:criti, level:lv }
     console.info('User:', personagem)
 
-    let cont
+    UserLv.innerHTML = `Lv. ${personagem.level}`
+
+    let cont;
     if (personagem.attack <= 2) {
         cont = 1;
     } else {
-        cont = randomInt(1, 9);
+        cont = randomInt(1, 2);
     }
 
     Timer(randomInt(4, 16));
@@ -121,7 +130,11 @@ function Game() {
 }
 
 function Gosma() {
-    EnemySprite.style.width = '600px'
+    if (window.innerWidth >= 1200) {
+        EnemySprite.style.width = '600px'
+    } else if (window.innerWidth < 1024 || window.innerWidth >= 768) {
+        EnemySprite.style.width = '450px'
+    }
     EnemySprite.src = 'sprites/bg-transparent/gosma.png'
     EnemyInfo[0].style.display = 'block'
     EnemyInfo[1].style.display = 'block'
@@ -130,8 +143,11 @@ function Gosma() {
     EnemyInfo[4].style.display = 'none'
 
     EnemyInfo[0].innerHTML = 'Gosma'
-    EnemyInfo[1].innerHTML = enemysAtributes[0].hp
+    EnemyInfo[1].classList.add('text-emerald-600');
+    EnemyInfo[1].innerHTML = `${enemysAtributes[0].hp} / ${enemysAtributes[0].hp}`
     EnemyInfo[2].innerHTML = enemysAtributes[0].attack
+
+    let conte = 0;
 }
 
 function Menu() {
@@ -150,6 +166,7 @@ function Salve() {
     SetItem("hp", health);
     SetItem("attack", att);
     SetItem("critical", criti);
+    SetItem("level", lv);
 }
 
 function Leave() {
@@ -185,4 +202,8 @@ function randomInt(minimo, maximo) {
     let max = Math.floor(maximo);
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function updateHP(hpID) {
+    
 }

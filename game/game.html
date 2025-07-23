@@ -32,20 +32,34 @@
             <span class="text-4xl block max-[480px]:text-3xl hover:cursor-pointer" id="span-icon" onclick="Menu()"><i class='bx bx-menu' id="icon-menu"></i></span>
         </div>
         <h2 id="alert-enemy" class="text-center font-semibold text-2xl mt-2 max-[510px]:text-xl">a</h2>
-        <div id="enemy-screen" class="flex flex-col flex-wrap justify-center items-center">
+        <div id="enemy-screen" class="flex flex-col flex-wrap justify-center items-center mb-12 max-[480px]:mb-0 max-[1200px]:mb-0">
             <img src="" id="enemy-sprite">
-            <div id="enemy-info" class="flex flex-row flex-nowrap justify-center items-center">
-                <h3 class="text-xl font-semibold m-5" id="name">NAME</h3>
-                <h3 class="text-xl font-semibold text-green-500 dark:text-green-400 m-5" id="hp">HP</h3>
-                <h3 class="text-xl font-semibold text-red-600 dark:text-red-500 m-5" id="ataque">ATTACK</h3>
-                <h3 class="text-xl font-semibold text-blue-500 dark:text-sky-400 m-5" id="fraqueza">FRAC</h3>
-                <h3 class="text-xl font-semibold text-yellow-500 dark:text-yellow-300 m-5" id="info">INFO</h3>
+            <div id="enemy-info" class="flex flex-row flex-nowrap justify-center items-center max-[480px]:flex-col max-[480px]:flex-wrap">
+                <h3 class="text-2xl font-semibold m-5 max-[480px]:m-0 max-[480px]:mb-1" id="name">NAME</h3>
+                <div class="flex flex-col flex-wrap items-center">
+                    <h3 id="hp" class="text-lg mt-1 max-[480px]:mt-0">HP</h3>
+                    <div class="relative w-52 h-5 bg-zinc-300 rounded overflow-hidden border border-zinc-500">
+                        <div id="enemy-hp-fill" class="absolute top-0 left-0 h-full bg-red-500 transition-all duration-500 w-full"></div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold text-red-600 dark:text-red-500 m-5 max-[480px]:m-3" id="ataque">ATTACK</h3>
+                <h3 class="text-2xl font-semibold text-blue-500 dark:text-sky-400 m-5 max-[480px]:m-3" id="fraqueza">FRAC</h3>
+                <h3 class="text-2xl font-semibold text-yellow-500 dark:text-yellow-300 m-5 max-[480px]:m-3" id="info">INFO</h3>
             </div>
         </div>
-        <div id="user-screen" class="absolute top-0 right-2">
-            <h3>Vida</h3>
-            <h3>Attack</h3>
-            <h3></h3>
+        <div id="user-screen" class="flex flex-col justify-center items-center">
+            <div id="info-user" class="flex flex-col flex-wrap justify-center items-center mb-2 max-[480px]:mb-1">
+                <h3 id="user-hp" class="text-lg mt-1 max-[480px]:mt-0">HP: 20 / 20</h3>
+                <h3 class="text-xl" id="user-level">Lv. -</h3>
+            </div>
+            <div id="action-user" class="flex flex-row flex-nowrap mt-3">
+                <button class="bg-sky-500 p-3 mr-5 rounded-md duration-[.40s] hover:bg-sky-600 dark:bg-sky-600 dark:hover:bg-sky-500">
+                    <h3 class="text-2xl" id="user-attack"><i class='bx bx-sword'></i> Attack</h3>
+                </button>
+                <button class="bg-red-600 p-3 rounded-md duration-[.40s] hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600">
+                    <h3 class="text-2xl" id="user-critical"><!--<i class='bx bx-axe'></i>--> <i class="ri-prohibited-line"></i> Critical</h3>
+                </button>
+            </div>
         </div>
     </div>
 </body>
